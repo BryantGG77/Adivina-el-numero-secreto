@@ -1,5 +1,5 @@
-let numeroSecreto = generarNumeroSecreto();
-let intentos = 1;
+let numeroSecreto = 0;
+let intentos = 0;
 
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
@@ -34,6 +34,17 @@ function generarNumeroSecreto() {
 
 }
 
-asignarTextoElemento('h1', 'Juego del número secreto');
-asignarTextoElemento('p', 'Indica un número del 1 al 10');
+function condicionesIniciales() {
+    asignarTextoElemento('h1', 'Juego del número secreto');
+    asignarTextoElemento('p', 'Indica un número del 1 al 10');
+    numeroSecreto = generarNumeroSecreto();
+    intentos = 1;
+}
 
+function reiniciarJuego() {
+    limpiarCaja();
+    condicionesIniciales();
+    document.getElementById('reiniciar').setAttribute('disabled', 'true');
+}
+
+condicionesIniciales();
