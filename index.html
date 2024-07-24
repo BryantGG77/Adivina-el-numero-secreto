@@ -8,31 +8,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>JS Game</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <section class="container">
+
         <div class="container__contenido">
+
             <div class="container__informaciones">
+
                 <div class="container__texto">
                     <h1></h1>
                     <p class="texto__parrafo"></p>
                 </div>
-                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
-                <div class="chute container__botones">
-                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
-                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo
-                        juego</button>
+
+                <div class="container__interaccion">
+                    <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                    <div class="chute container__botones">
+                        <button onclick="verificarIntento();" class="container__boton" id="intentar">Intentar</button>
+                        <button onclick=" reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo
+                            juego</button>
+                    </div>
                 </div>
+
             </div>
+
+        </div>
+
+        <div class="container__imagen">
             <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
         </div>
-    </div>
 
-
+    </section>
 
 
     <script src="app.js" defer></script>

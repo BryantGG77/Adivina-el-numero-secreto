@@ -17,6 +17,10 @@ function verificarIntento() {
     if (numeroDeUsuario === numeroSecreto) {
         asignarTextoElemento('p', `Acertaste el número en ${intentos} ${(intentos === 1) ? 'intento' : 'intentos'}`);
         document.getElementById('reiniciar').removeAttribute('disabled');
+        const btnintentar = document.getElementById('intentar');
+        btnintentar.disabled = true;
+    } else if (numeroDeUsuario == '') {
+        asignarTextoElemento('p', 'Ingresa un número');
     } else {
         //El usuario no acertó.
         if (numeroDeUsuario > numeroSecreto) {
@@ -69,6 +73,7 @@ function reiniciarJuego() {
     condicionesIniciales();
     //Deshabilitar el botón de nuevo juego
     document.querySelector('#reiniciar').setAttribute('disabled', 'true');
+    document.querySelector('#intentar').removeAttribute('disabled');
 
 }
 
